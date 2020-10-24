@@ -1,3 +1,7 @@
+Please note that this package includes source code found on Stackoverflow.
+The url credits can be found in the .ts files within /src/ directory.
+I make no guarantee of the license of those copied code blocks.
+
 MIT License
 
 Copyright (c) 2020 WebDevEtc.
