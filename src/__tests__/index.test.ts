@@ -22,10 +22,12 @@ describe("easy-date-formatter", () => {
       expected: "th",
     },
   ])("english ordinal suffix", testEnglishOrdinalSuffix);
+
   test.each(["B", "o", "Z", "T", "P", "O", "e", "c", "u", "r", "c", "I"])(
     'format "%s" throws an error',
     unsupportedThrowsError
   );
+
   test.each`
     input      | expected
     ${""}      | ${""}
@@ -66,7 +68,7 @@ function expectedFormatYmd({
 }: {
   input: string;
   expected: string;
-}) {
+}): void {
   const formattedDate = dateFormatter(input, new Date());
 
   expect(formattedDate).toBe(expected);
@@ -78,10 +80,10 @@ function testEnglishOrdinalSuffix({
 }: {
   date: Date;
   expected: string;
-}) {
+}): void {
   expect(dateFormatter("S", date)).toBe(expected);
 }
 
-function unsupportedThrowsError(char: string) {
+function unsupportedThrowsError(char: string): void {
   expect(() => dateFormatter(char)).toThrowError();
 }
