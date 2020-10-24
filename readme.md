@@ -16,3 +16,10 @@ console.log(dateFormatter('d-m-Y', date));
 ```
 
 For more examples, see the test file.
+
+## Test
+
+Test with `yarn test`
+
+![image](https://user-images.githubusercontent.com/42039233/97086370-b9f90e80-161a-11eb-904f-3188b1159f81.png)
+
